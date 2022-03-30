@@ -4,18 +4,23 @@
   width: 100%;
 }
 
+.profile__user {
+  display: flex;
+}
+
 .profile__image {
   max-width: 120px;
   max-height: 120px;
   border-radius: 50%;
   margin-top: 36.25px;
+  margin-right: 30px;
   display: block;
 }
 
 .profile__info {
   max-width: 415px;
   display: grid;
-  grid-template-columns: minmax(auto, 373px) auto;
+  grid-template-columns: 373px auto;
   grid-template-areas:
     "name button"
     "occupation occupation";
@@ -64,7 +69,6 @@
   width: 150px;
   height: 50px;
   margin-top: 75px;
-  margin-left: 165px;
   background-color: rgba(0, 0, 255, 0);
   border: 2px solid #fff;
   border-radius: 2px;
@@ -76,43 +80,36 @@
   opacity: 0.6;
 }
 
-@media screen and (max-width: 960px) {
-  .profile__info {
-    margin-left: 10px;
-    max-width: 224px;
+@media screen and (max-width: 750px) {
+  .profile {
+    margin: 0;
   }
 
-  .profile__image {
-    margin-left: 15px;
+  .profile__info {
+    grid-template-columns: 300px auto;
   }
 
   .profile__name {
-    font-size: 34px;
+    font-size: 32px;
+  }
+
+  .profile__button_type_add {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .profile__info {
+    grid-template-columns: 250px auto;
+  }
+
+  .profile__name {
+    font-size: 26px;
   }
 
   .profile__button_type_edit {
     width: 18px;
     height: 18px;
-    margin-left: 0;
-  }
-
-  .profile__button_type_add {
-    margin-left: 160px;
-    margin-right: 10px;
-  }
-}
-
-@media screen and (max-width: 805px) {
-  .profile__button_type_add {
-    width: 79px;
-    height: 33px;
-    margin-left: 30px;
-  }
-}
-
-@media screen and (max-width: 674px) {
-  .profile__name {
-    font-size: 33px;
   }
 }
 
@@ -124,8 +121,18 @@
     margin: 0 auto;
   }
 
+  .profile__user {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile__image {
+    margin-right: 0;
+  }
+
   .profile__info {
     margin: 0;
+    grid-template-columns: 196px auto;
   }
 
   .profile__image {
@@ -148,7 +155,7 @@
   }
 
   .profile__button_type_edit {
-    margin: 30.25px 0 0 0;
+    margin: 30.25px 0 0 15.25px;
   }
 
   .profile__button_type_add {
