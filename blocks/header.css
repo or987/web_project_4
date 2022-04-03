@@ -1,5 +1,7 @@
 .header {
   align-self: center;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  width: 100%;
 }
 
 .header__logo {
@@ -7,10 +9,6 @@
   height: 33px;
   margin-top: 45px;
   margin-bottom: 41px;
-}
-
-.header__line {
-  width: 100%;
 }
 
 @media screen and (max-width: 960px) {

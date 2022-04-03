@@ -33,8 +33,10 @@
   line-height: 22px;
   padding: 13.66px 124px 18.49px 125px;
   margin-top: 18px;
+  margin-bottom: 36.51px;
   transition-duration: 1s;
   width: 358px;
+  border: none;
 }
 
 .form__button:hover {
@@ -57,11 +59,13 @@
   .form__input {
     padding-bottom: 9px;
     width: 238px;
+    margin-bottom: 30px;
   }
 
   .form__button {
     max-width: 238px;
     padding: 14px 100px;
     margin-top: 16px;
+    margin-bottom: 25px;
   }
 }

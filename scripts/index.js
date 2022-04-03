@@ -8,7 +8,7 @@ const popup = document.querySelector(".popup");
 
 const openPopupButton = document.querySelector(".profile__button_type_edit");
 
-const formSaveButton = document.querySelector(".form__button");
+const formSubmit = document.querySelector(".form");
 const form = document.querySelector("form");
 const closeButton = document.querySelector(".popup__button-close");
 
@@ -18,19 +18,17 @@ function openPopup() {
   inputOccupation.value = profileOccupation.textContent;
 }
 
-openPopupButton.addEventListener("click", openPopup);
+function closePopup() {
+  popup.classList.remove("popup_open");
+}
 
 function savePopup(e) {
-  popup.classList.remove("popup_open");
+  closePopup();
   e.preventDefault();
   profileName.textContent = inputName.value;
   profileOccupation.textContent = inputOccupation.value;
 }
 
-formSaveButton.addEventListener("click", savePopup);
-
-function closePopup() {
-  popup.classList.remove("popup_open");
-}
-
+openPopupButton.addEventListener("click", openPopup);
+formSubmit.addEventListener("submit", savePopup);
 closeButton.addEventListener("click", closePopup);

@@ -19,11 +19,6 @@
         alt="header logo"
         class="header__logo"
       />
-      <img
-        src="./images/header__line.svg"
-        alt="header line"
-        class="header__line"
-      />
     </header>
     <main class="content">
       <section class="profile">
@@ -58,10 +53,10 @@
               class="gallery__image"
             />
             <div class="gallery__card-description">
-              <span class="gallery__card-name">Yosemite Valley</span>
+              <h2 class="gallery__card-name">Yosemite Valley</h2>
               <button
                 type="button"
-                aria-label="like button"
+                aria-label="heart shaped button"
                 class="gallery__button"
               ></button>
             </div>
@@ -73,10 +68,10 @@
               class="gallery__image"
             />
             <div class="gallery__card-description">
-              <span class="gallery__card-name">Lake Louise</span>
+              <h2 class="gallery__card-name">Lake Louise</h2>
               <button
                 type="button"
-                aria-label="like button"
+                aria-label="heart shaped button"
                 class="gallery__button"
               ></button>
             </div>
@@ -88,10 +83,10 @@
               class="gallery__image"
             />
             <div class="gallery__card-description">
-              <span class="gallery__card-name">Bald Mountains</span>
+              <h2 class="gallery__card-name">Bald Mountains</h2>
               <button
                 type="button"
-                aria-label="like button"
+                aria-label="heart shaped button"
                 class="gallery__button"
               ></button>
             </div>
@@ -103,10 +98,10 @@
               class="gallery__image"
             />
             <div class="gallery__card-description">
-              <span class="gallery__card-name">Latemar</span>
+              <h2 class="gallery__card-name">Latemar</h2>
               <button
                 type="button"
-                aria-label="like button"
+                aria-label="heart shaped button"
                 class="gallery__button"
               ></button>
             </div>
@@ -118,10 +113,10 @@
               class="gallery__image"
             />
             <div class="gallery__card-description">
-              <span class="gallery__card-name">Vanoise National Park</span>
+              <h2 class="gallery__card-name">Vanoise National Park</h2>
               <button
                 type="button"
-                aria-label="like button"
+                aria-label="heart shaped button"
                 class="gallery__button"
               ></button>
             </div>
@@ -133,10 +128,10 @@
               class="gallery__image"
             />
             <div class="gallery__card-description">
-              <span class="gallery__card-name">Lago di Braies</span>
+              <h2 class="gallery__card-name">Lago di Braies</h2>
               <button
                 type="button"
-                aria-label="like button"
+                aria-label="heart shaped button"
                 class="gallery__button"
               ></button>
             </div>
@@ -145,11 +140,12 @@
       </section>
       <div class="popup">
         <div class="popup__container">
-          <img
-            src="./images/Close_Icon.svg"
-            alt="close icone"
+          <button
+            type="button"
+            aria-label="close button"
             class="popup__button-close"
-          />
+          ></button>
+
           <form class="form" name="profile">
             <h2 class="form__title">Edit profile</h2>
             <input
@@ -164,11 +160,15 @@
               placeholder="About me"
             />
 
-            <button type="submit" class="form__button">Save</button>
+            <button type="submit" aria-lable="save button" class="form__button">
+              Save
+            </button>
           </form>
         </div>
       </div>
     </main>
-    <footer class="footer">© 2021 Around The U.S.</footer>
+    <footer class="footer">
+      <p class="footer__text">© 2021 Around The U.S.</p>
+    </footer>
   </body>
 </html>

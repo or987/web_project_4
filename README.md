@@ -2,8 +2,23 @@
 
 ### Overview
 
+- Intro
+- Project features
 - Figma
 - GitHub Pages
+
+**Intro**
+
+This is a project that showcases the basis of an interactive page where users can add, remove, or like photos. This is the first step of this project where you can only view the basic gallery and edit user information. In the next project we will add more interactivities to the page.
+
+**Project features**
+
+- Semantic HTML5
+- Flexbox
+- Grid
+- Positioning
+- Flat BEM
+- JavaScript
 
 **Figma**
 
