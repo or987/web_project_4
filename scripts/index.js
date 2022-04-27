@@ -32,11 +32,11 @@ const popupAdd = document.querySelector(".popup_type_add-card");
 const popupImage = document.querySelector(".popup_type_image-preview");
 
 //Forms
-const formProfile = document.querySelector(".form__profile");
+const formProfile = document.querySelector(".form_type_profile");
 const inputName = document.querySelector(".form__input_type_name");
 const inputOccupation = document.querySelector(".form__input_type_occupation");
 
-const formAdd = document.querySelector(".form__add");
+const formAdd = document.querySelector(".form_type_add");
 const addTitleInput = document.querySelector(".form__input_type_image-title");
 const addImageInput = document.querySelector(".form__input_type_image-link");
 
