@@ -9,7 +9,7 @@
 
 **Intro**
 
-This is a project that showcases the basis of an interactive page where users can add, remove, or like photos. This is the first step of this project where you can only view the basic gallery and edit user information. In the next project we will add more interactivities to the page.
+This is a project that showcases the basis of an interactive page where users can add, remove, or like photos. This is the second step of this project where you can view the basic gallery, edit user information, add/remove images.
 
 **Project features**
 
@@ -17,12 +17,13 @@ This is a project that showcases the basis of an interactive page where users ca
 - Flexbox
 - Grid
 - Positioning
+- Visibility
 - Flat BEM
 - JavaScript
 
 **Figma**
 
-- [Link to the project in Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+- [Link to the project in Figma](https://www.figma.com/file/m79HxYeZpOXRw0Tz2eZGOV/Sprint-5%3A-Around-The-U.S.-%7C-desktop-%2B-mobile?node-id=1%3A246)
 
 **GitHub Pages**
 
