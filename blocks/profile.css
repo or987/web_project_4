@@ -132,16 +132,13 @@
     align-items: center;
   }
 
-  .profile__image {
-    margin-right: 0;
-  }
-
   .profile__info {
     margin: 0;
     grid-template-columns: 196px auto;
   }
 
   .profile__image {
+    margin-right: 0;
     margin-top: 42px;
     margin-left: 0;
   }
