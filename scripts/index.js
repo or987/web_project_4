@@ -27,9 +27,9 @@ const initialCards = [
 
 //Popups
 
-const popupProfile = document.querySelector(".popup_type_edit-profile");
-const popupAdd = document.querySelector(".popup_type_add-card");
-const popupImage = document.querySelector(".popup_type_image-preview");
+const editProfilePopup = document.querySelector(".popup_type_edit-profile");
+const addCardPopup = document.querySelector(".popup_type_add-card");
+const imagePopup = document.querySelector(".popup_type_image-preview");
 
 //Forms
 const formProfile = document.querySelector(".form_type_profile");
@@ -74,10 +74,10 @@ function openPopup(popup) {
   popup.classList.add("popup_open");
 }
 
-function openPopupProfile() {
+function openEditProfilePopup() {
   inputName.value = profileName.textContent;
   inputOccupation.value = profileOccupation.textContent;
-  openPopup(popupProfile);
+  openPopup(editProfilePopup);
 }
 
 function closePopup(popup) {
@@ -85,7 +85,7 @@ function closePopup(popup) {
 }
 
 function saveFormProfilePopup(e) {
-  closePopup(popupProfile);
+  closePopup(editProfilePopup);
   e.preventDefault();
   profileName.textContent = inputName.value;
   profileOccupation.textContent = inputOccupation.value;
@@ -101,15 +101,16 @@ const createCard = (card) => {
   cardImage.src = card.link;
   cardTitle.textContent = card.name;
 
-  const handledelete = () => {
+  const handleDelete = () => {
     cardElement.remove();
   };
-  deleteButton.addEventListener("click", handledelete);
+  deleteButton.addEventListener("click", handleDelete);
   likeButton.addEventListener("click", toggleLikeButton);
   cardImage.addEventListener("click", function () {
     previewImage.src = card.link;
+    previewImage.alt = card.name;
     previewImageTitle.textContent = card.name;
-    openPopup(popupImage);
+    openPopup(imagePopup);
   });
 
   return cardElement;
@@ -128,33 +129,33 @@ const renderCard = (card) => {
 initialCards.forEach(renderCard);
 
 //Event Listeners
-openProfilePopupButton.addEventListener("click", openPopupProfile);
+openProfilePopupButton.addEventListener("click", openEditProfilePopup);
 
 closeProfilePopupButton.addEventListener("click", () => {
-  closePopup(popupProfile);
+  closePopup(editProfilePopup);
 });
 
 closeImagePopupButton.addEventListener("click", () => {
-  closePopup(popupImage);
+  closePopup(imagePopup);
 });
 
 formProfile.addEventListener("submit", saveFormProfilePopup);
 
 addCardButton.addEventListener("click", () => {
-  openPopup(popupAdd);
+  openPopup(addCardPopup);
 });
 
 closeAddPopupButton.addEventListener("click", () => {
-  closePopup(popupAdd);
+  closePopup(addCardPopup);
 });
 
 formAdd.addEventListener("submit", function (e) {
+  e.preventDefault();
   const card = {
     name: addTitleInput.value,
     link: addImageInput.value,
   };
   renderCard(card);
-  closePopup(popupAdd);
+  closePopup(addCardPopup);
   formAdd.reset();
-  e.preventDefault();
 });
