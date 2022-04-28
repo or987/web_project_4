@@ -99,6 +99,7 @@ const createCard = (card) => {
   const likeButton = cardElement.querySelector(".card__button_type_like");
 
   cardImage.src = card.link;
+  cardImage.alt = `Photo of ${card.name}`;
   cardTitle.textContent = card.name;
 
   const handleDelete = () => {
@@ -108,7 +109,7 @@ const createCard = (card) => {
   likeButton.addEventListener("click", toggleLikeButton);
   cardImage.addEventListener("click", function () {
     previewImage.src = card.link;
-    previewImage.alt = card.name;
+    previewImage.alt = `Photo of ${card.name}`;
     previewImageTitle.textContent = card.name;
     openPopup(imagePopup);
   });
