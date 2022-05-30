@@ -32,6 +32,7 @@ const addCardPopup = document.querySelector(".popup_type_add-card");
 const imagePopup = document.querySelector(".popup_type_image-preview");
 
 //Forms
+const form = document.querySelectorAll(".form");
 const formProfile = document.querySelector(".form_type_profile");
 const inputName = document.querySelector(".form__input_type_name");
 const inputOccupation = document.querySelector(".form__input_type_occupation");
