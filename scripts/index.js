@@ -71,6 +71,11 @@ const previewImage = document.querySelector(".popup__image-preview");
 const previewImageTitle = document.querySelector(".popup__image-title");
 
 //Functions
+
+function handleEscToClose(e) {}
+
+function handleClickToClose(e) {}
+
 function openPopup(popup) {
   popup.classList.add("popup_open");
 }
