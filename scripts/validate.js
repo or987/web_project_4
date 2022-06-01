@@ -36,6 +36,7 @@ const toggleButton = (inputList, button, settings) => {
 const setEventListeners = (formEl, settings) => {
   const inputList = Array.from(formEl.querySelectorAll(settings.inputSelector));
   const button = formEl.querySelector(settings.submitButtonSelector);
+  toggleButton(inputList, button, settings);
   inputList.forEach((input) => {
     input.addEventListener("input", (e) => {
       checkInputValidity(formEl, input, settings);
