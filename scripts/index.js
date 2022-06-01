@@ -72,12 +72,24 @@ const previewImageTitle = document.querySelector(".popup__image-title");
 
 //Functions
 
-function handleEscToClose(e) {}
+function handleClickToClose(e) {
+  const popupVisible = document.querySelector(".popup_open");
+  if (e.target.classList.contains("popup_open")) {
+    closePopup(popupVisible);
+  }
+}
 
-function handleClickToClose(e) {}
+function handleEscToClose(e) {
+  const popupVisible = document.querySelector(".popup_open");
+  if (e.key === "Escape") {
+    closePopup(popupVisible);
+  }
+}
 
 function openPopup(popup) {
   popup.classList.add("popup_open");
+  document.addEventListener("mousedown", handleClickToClose);
+  document.addEventListener("keydown", handleEscToClose);
 }
 
 function openEditProfilePopup() {
@@ -88,6 +100,8 @@ function openEditProfilePopup() {
 
 function closePopup(popup) {
   popup.classList.remove("popup_open");
+  document.removeEventListener("mousedown", handleClickToClose);
+  document.removeEventListener("keydown", handleEscToClose);
 }
 
 function saveFormProfilePopup(e) {
